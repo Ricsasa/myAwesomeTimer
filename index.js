@@ -3,8 +3,6 @@ const MINUTE = SECOND * 60;
 const HOUR = MINUTE * 60;
 const DAY = HOUR * 24;
 
-
-
 const buttonHandler = () => {
   const selectedDate = document.getElementById('flatpickr-control').value;
   if (selectedDate) {
@@ -24,10 +22,12 @@ const startTimer = (targetTime) => {
     const diff = targetTime - now;
 
     if (diff < 0) {
-      if (typeof timerInterval != null) {
-        clearInterval(timerInterval);
-      }
       showExpired();
+      try {
+        clearInterval(timerInterval);
+      } catch (e) {
+        displayTimer({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
     } else {
       const timerObj = {
         days: Math.floor(diff / DAY),
@@ -66,18 +66,17 @@ const displayTimer = (timerObj) => {
   });
 };
 
-const showExpired = () => {  
+const showExpired = () => {
   const expiredBanner = document.querySelector('.expired-banner');
   expiredBanner.classList.remove('hidden');
 };
 
-const hideExpired = () => {  
+const hideExpired = () => {
   const expiredBanner = document.querySelector('.expired-banner');
   expiredBanner.classList.add('hidden');
 };
 
+const random = new Date();
+random.setDate(random.getDate() + Math.random() * (100 - 2) + 2);
 
-const tomorrow = new Date();
-tomorrow.setDate(tomorrow.getDate() + 1);
-
-let timerInterval = startTimer(tomorrow.getTime());
+let timerInterval = startTimer(random.getTime());
