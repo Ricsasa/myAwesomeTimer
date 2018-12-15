@@ -8,5 +8,5 @@ It makes use of the flatpickr library (https://github.com/flatpickr/flatpickr) t
 
 You can see a live version of this tool in
 
-https://countdown-timer-b96m57vxc.now.sh/
+https://countdown-timer-2ots7i27s.now.sh/
 
