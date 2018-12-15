@@ -7,3 +7,6 @@ This timer works using vanilla javascript. The first time is executed, it shows 
 It makes use of the flatpickr library (https://github.com/flatpickr/flatpickr) to enable the calendar.
 
 You can see a live version of this tool in
+
+
+
