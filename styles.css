@@ -1,0 +1,67 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  font-style: normal;
+  font-variant: normal;  
+  text-align: center
+}
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.timer-box {
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  flex: 0 1 4em;
+  margin: 1em;
+  padding: 10px;
+  
+}
+
+.timer-box-value {
+  font-size: 2em;
+}
+
+.timer-box-title {
+  color: lightgray;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.expired-banner {
+  color: red;  
+}
+
+.hidden {
+  display: none;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: center;
+}
+
+.control {
+  margin: 1em;
+}
+
+.control button {
+  background-color: #4CAF50; 
+  border: solid 1px #4CAF50;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;  
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  outline: none;
+}
+
+.control button:hover {
+  background-color: white;
+  color: black;
+  border: solid 1px #4CAF50;
+}
